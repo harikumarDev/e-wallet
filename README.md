@@ -1,110 +1,70 @@
+# E-wallet APP
 
-# Wallet System
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Implementation of Wallet System in NodeJs
+## Available Scripts
 
-## API Reference
+In the project directory, you can run:
 
-#### Get wallet details
+### `npm start`
 
-```http
-  GET /api/wallet/${id}
-```
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `id` | `string` | **Required**. id of wallet |
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-Takes the *id* of wallet as *params* and returns wallet details. Response,
+### `npm test`
 
-- Example
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-```json
-  {
-    "_id": "61c0689f52b8febdead6f99d",
-    "name": "Jhon",
-    "balance": 7872.8976,
-    "createdAt": "2021-12-20T11:27:27.929+00:00",
-    "updatedAt": "2021-12-20T11:31:58.660+00:00",
-  }
-```
-#### Initialise wallet
+### `npm run build`
 
-```http
-  POST /api/setup
-```
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `name` | `string` | **Required**. name of User |
-| `balance` | `number` | Initial balance in wallet |
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-Given *name* and *balance* of wallet as *body*, returns the following response
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-- Example
+### `npm run eject`
 
-```json
-  {
-    "id": "61c0689f52b8febdead6f99d",
-    "balance": 98.8976,
-    "transactionId": "61c0689f52b8febdead6f99f",
-    "name": "Jack",
-    "date": "2021-12-20T11:31:58.660+00:00",
-  }
-```
-- Default value for *balance* is `0`
-#### Credit/Debit amount
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-```http
-  POST /api/transact/${walletId}
-```
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `id` | `string` | **Required**. id of wallet |
-| `amount` | `number` | **Required**. Amount for transaction |
-| `description` | `string` | **Required**. Description of transaction |
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-Takes *id* as param and *amount* and *description* as body, returns the following response
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-- Example
+## Learn More
 
-```json
-  {
-    "balance": 946.6356,
-    "transactionId": "61c068ff52b8febdead6f9a7",
-  }
-```
-- Amount is **negative for debit** and a **positive number for credit**
-- Here *balance* is the balance after transaction
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-#### Fetch transactions
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-```http
-  GET /api//transactions?walletId={walletId}&skip={skip}&limit={limit}
-```
+### Code Splitting
 
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `walletId` | `string` | **Required**. id of wallet |
-| `skip` | `number` | No.of Transactions to skip |
-| `limit` | `number` | No.of Transactions in response |
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-Takes the *id* of wallet as *params* and returns wallet details. Response,
+### Analyzing the Bundle Size
 
-- Example
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-```json
-[
-  {
-    "_id": "61c0689f52b8febdead6f99d",
-    "walletId": "Jhon",
-    "balance": 7872.8976,
-    "amount": 869.76,
-    "type": "CREDIT",
-    "createdAt": "2021-12-20T11:27:27.929+00:00",
-    "updatedAt": "2021-12-20T11:31:58.660+00:00",
-  },
-  ....
-]
-```
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
