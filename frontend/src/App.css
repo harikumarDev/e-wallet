@@ -1,0 +1,69 @@
+.Home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3em;
+  flex-wrap: wrap;
+  height: 95vh;
+}
+
+.walletForm {
+  border: 3px solid green;
+  border-radius: 10px;
+  padding: 1.5em;
+  width: 25%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5em;
+}
+
+.details {
+  border: 3px solid peachpuff;
+  padding: 1em;
+  border-radius: 1em;
+}
+
+i {
+  color: purple;
+}
+
+.transact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid orange;
+  padding: 1em;
+  border-radius: 1em;
+  width: 30%;
+}
+
+.transact > form {
+  width: 85%;
+}
+
+.details-head {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.w-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  border: 2px solid orange;
+  padding: 0.6em;
+  border-radius: 1em;
+}
+
+.data-table {
+  padding: 1em;
+}
